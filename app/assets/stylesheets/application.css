@@ -2,5 +2,4 @@
  *= require 'css/bootstrap.css'
  *= require_self
  *= require_tree .
- *= require 'reset'
  */
