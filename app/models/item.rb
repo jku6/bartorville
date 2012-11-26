@@ -1,3 +1,3 @@
-class Item < ActiveaRecord::Base
+class Item < ActiveRecord::Base
   belongs_to :user
 end
