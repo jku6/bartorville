@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: barter_development
+  database: bartorville_development
   pool: 5
   host: localhost
   username: postgres
@@ -11,8 +11,9 @@ development:
 production:
   adapter: postgresql
   encoding: unicode
-  database: barter_production
+  database: bartorville_production
   pool: 5
   host: localhost
   username: postgres
   password: gado595
+
