@@ -1,4 +1,19 @@
 Bartorville::Application.routes.draw do
+  
+  root :to => 'session#new'
+
+  resources :users
+  resources :items
+  resources :photos
+
+  match '/login' => 'session#new', :via => :get
+  match '/logout' => 'session#destroy', :via => :get
+  match '/session' => 'session#create', :via => :post
+  
+  match '/search' => 'search#index', :via => :get
+  post '/primary' => 'photos#primary'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +63,7 @@ Bartorville::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  
 
   # See how all your routes lay out with "rake routes"
 
