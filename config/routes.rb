@@ -5,6 +5,7 @@ Bartorville::Application.routes.draw do
   resources :users
   resources :items
   resources :photos
+  resources :dashboard
 
   match '/login' => 'session#new', :via => :get
   match '/logout' => 'session#destroy', :via => :get
