@@ -1,0 +1,14 @@
+<h1><%= @auth.username %>'s items</h1>
+
+
+  <% @items.each do |item| %>
+      <%= image_tag item.image.large.url %>
+      <p><%= item.description %></p>
+  <% end %>
+
+
+  <%= link_to 'Edit', edit_item_path(item) %>
+  <%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+  <% end %>
+</ul>
