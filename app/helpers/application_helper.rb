@@ -7,12 +7,12 @@ module ApplicationHelper
         end
     end
 
-    def dynamic_photos_links
-        if @auth
-            render 'nav/photonav'
-        else
-        end
-    end
+    # def dynamic_photos_links
+    #     if @auth
+    #         render 'nav/photonav'
+    #     else
+    #     end
+    # end
 
     def dynamic_dashboard_links
         if @auth
