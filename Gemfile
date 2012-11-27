@@ -16,6 +16,7 @@ gem 'rails-footnotes'
 gem 'ipsum'
 gem 'kaminari'
 gem 'pry-rails'
+gem 'aws-ses'
 
 
 
