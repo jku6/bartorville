@@ -5,7 +5,7 @@ development:
   pool: 5
   host: localhost
   username: postgres
-  password: gado595
+  password: 08820
 
 
 production:
@@ -15,5 +15,5 @@ production:
   pool: 5
   host: localhost
   username: postgres
-  password: gado595
+  password: 08820
 
