@@ -1,7 +1,7 @@
-class ItemController < ApplicationController
+class ItemsController < ApplicationController
   
   def index
-    @items = Items.where(:user_id => @auth) # only shows user questions
+    @items = Item.where(:user_id => @auth) # only shows user questions
   end
 
   def show
