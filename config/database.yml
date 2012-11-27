@@ -6,7 +6,7 @@ development:
   host: localhost
   username: postgres
   password: Akarnani1
-
+  
 
 production:
   adapter: postgresql
