@@ -1,6 +1,21 @@
 
 <% if @auth %>
   <div><h1>Welcome <%= @auth[:username] %></h1></div>
+  <%= image_tag @auth[:user_photo] %>
+
+
+    <div>
+      <%= link_to "Add items", new_item_path %>
+    </div>
+
+    <div>
+      <%= link_to "Search for items", search_path %>
+    </div>
+
+    <div>
+      <%= link_to "Edit your profile", edit_user_path(@auth) %>
+    </div>
+
 
   
 <% else %> <!-- This is what happens if you are not logged in to a session -->

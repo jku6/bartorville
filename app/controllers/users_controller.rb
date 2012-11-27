@@ -37,7 +37,7 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         # check paths and match up  =========================
         redirect_to dashboard_index_path(@user) 
-             else
+      else
         render :edit
       end
   end

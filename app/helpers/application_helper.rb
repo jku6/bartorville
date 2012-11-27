@@ -14,6 +14,8 @@ module ApplicationHelper
     #     end
     # end
 
+    
+
     def dynamic_dashboard_links
         if @auth
             link_to "Logged in as #{@auth.username}", dashboard_index_path
