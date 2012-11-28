@@ -1,5 +1,12 @@
-<h1><%= @item.username %></h1>
 
-<%= image_tag @item.image %>
+<h1>Item: <%= @item.name %></h1>
 
- <%= link_to 'Edit', edit_item_path(item) %>
+<p>
+  <b>Item Photo:</b>
+  <%= image_tag @item.photo %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_item_path %>
+<%= link_to 'Back', items_path %>

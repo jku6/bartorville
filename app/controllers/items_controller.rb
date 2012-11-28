@@ -12,16 +12,34 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
-  def create
-    i = Item.create(params[:item])
-    @auth.items << i
+  
 
-    redirect_to items_path
+  def create
+    @item = Item.new(params[:item])
+    user = User.find(@auth.id)
+    user.items << @item
+
+    if @item.save 
+      redirect_to dashboard_index_path(@user)
+    else
+      render :new
+    end
   end
+  
+
 
   def edit
     @item = Item.find(params[:id])
   end
+
+  def update
+        @item = Item.find(params[:id])
+        if @item.update_attributes(params[:item])
+            redirect_to @item
+        else
+            render :edit    
+        end
+    end
 
   def destroy
     item = Item.find(params[:id])

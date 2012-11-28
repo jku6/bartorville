@@ -2,17 +2,22 @@
 
 
   <% @items.each do |item| %>
-    <div class="image">
-      <%= image_tag item.image.large.url %>
+    <div class="name">
+      <%= item.name %>
     </div>
+    
     <div class="description">
       <%= item.description %>
     </div>
 
+    <div class="photo">
+      <%= image_tag item.photo %>
+    </div>
 
 
- 
-   <%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %>
-   <%= link_to 'Edit', edit_item_path(item) %>
+
+    <%= link_to 'Show', item %></td>
+    <%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Edit', edit_item_path(item) %>
 <% end %>
  
