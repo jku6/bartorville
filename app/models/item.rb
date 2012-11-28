@@ -15,4 +15,7 @@ class Item < ActiveRecord::Base
   belongs_to :user
   mount_uploader :photo, ImageUploader
   
+  def self.text_search(query)
+        self.where("name @@ :q or description @@ :q", :q => query)
+    end
 end

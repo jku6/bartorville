@@ -1,5 +1,20 @@
 class ItemsController < ApplicationController
   
+  # search code
+  def search
+    query = params[:query]
+    if query.present?
+      @gods = Item.text_search(query)
+    else
+      @gods = Item.all
+    end
+  end
+  # search code
+
+
+
+
+
   def index
     @items = Item.where(:user_id => @auth) # only shows user questions
   end

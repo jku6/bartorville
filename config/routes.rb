@@ -3,7 +3,13 @@ Bartorville::Application.routes.draw do
   root :to => 'session#new'
 
   resources :users
-  resources :items
+  
+  resources :items do
+    collection do
+      post 'search'
+    end
+  end
+  
   resources :dashboard
 
   match '/login' => 'session#new', :via => :get
