@@ -12,6 +12,8 @@
 #
 
 class Item < ActiveRecord::Base
+    # attr_accessor :name, :description
+
   belongs_to :user
   mount_uploader :photo, ImageUploader
   

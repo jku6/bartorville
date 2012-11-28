@@ -4,19 +4,18 @@ Bartorville::Application.routes.draw do
 
   resources :users
   
-  resources :items do
-    collection do
-      post 'search'
-    end
-  end
+  resources :items 
   
   resources :dashboard
+
+  match '/all' => 'items#all', :via => :get 
+  match '/all/search' => 'items#search', :via => :post
 
   match '/login' => 'session#new', :via => :get
   match '/logout' => 'session#destroy', :via => :get
   match '/session' => 'session#create', :via => :post
   
-  match '/search' => 'search#index', :via => :get
+  
   post '/primary' => 'photos#primary'
 
 

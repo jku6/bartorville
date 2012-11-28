@@ -4,10 +4,11 @@ class ItemsController < ApplicationController
   def search
     query = params[:query]
     if query.present?
-      @gods = Item.text_search(query)
+      @items = Item.text_search(query)
     else
-      @gods = Item.all
+      @items = Item.all
     end
+  
   end
   # search code
 
@@ -17,6 +18,10 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.where(:user_id => @auth) # only shows user questions
+  end
+
+  def all
+    @items = Item.all
   end
 
   def show
